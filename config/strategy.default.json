@@ -1,0 +1,58 @@
+{
+  "strategy": {
+    "name": "Volume Price Breakout Strategy",
+    "description": "Cryptocurrency trading strategy based on volume and price breakouts",
+    "version": "1.0.0",
+    "mode": "paper"
+  },
+  "trading": {
+    "symbol": "BTC/USDT",
+    "timeframe": "1m",
+    "exchange": "binance",
+    "sandbox": true,
+    "api_key": "",
+    "secret": ""
+  },
+  "parameters": {
+    "volume_period": 30,
+    "volume_multiplier": 2.0,
+    "price_change_threshold": 1.5,
+    "capital_usage_percent": 10,
+    "add_position_threshold": 2.0,
+    "stop_loss_threshold": 3.0,
+    "max_positions": 3,
+    "min_order_size": 0.001,
+    "max_order_size": 1.0
+  },
+  "risk_management": {
+    "max_drawdown": 20,
+    "position_timeout": 3600,
+    "max_daily_loss": 1000,
+    "stop_all_trading": false
+  },
+  "execution": {
+    "slippage": 0.1,
+    "retry_attempts": 3,
+    "retry_delay": 1,
+    "order_timeout": 30,
+    "use_market_orders": true,
+    "partial_fill_handling": "retry"
+  },
+  "monitoring": {
+    "log_level": "INFO",
+    "log_to_file": true,
+    "log_file": "logs/strategy.log",
+    "log_trades": true,
+    "log_signals": true,
+    "metrics_collection": true,
+    "alert_webhook": "",
+    "alert_email": ""
+  },
+  "backtesting": {
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "initial_balance": 10000,
+    "commission": 0.001,
+    "slippage": 0.001
+  }
+}

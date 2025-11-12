@@ -1,0 +1,51 @@
+{
+  "strategy": {
+    "name": "Conservative Volume Price Breakout",
+    "description": "Lower risk configuration with stricter thresholds",
+    "version": "1.0.0",
+    "mode": "paper"
+  },
+  "trading": {
+    "symbol": "BTC/USDT",
+    "timeframe": "5m",
+    "exchange": "binance",
+    "sandbox": true,
+    "api_key": "",
+    "secret": ""
+  },
+  "parameters": {
+    "volume_period": 50,
+    "volume_multiplier": 2.5,
+    "price_change_threshold": 2.0,
+    "capital_usage_percent": 5,
+    "add_position_threshold": 3.0,
+    "stop_loss_threshold": 2.0,
+    "max_positions": 2,
+    "min_order_size": 0.001,
+    "max_order_size": 0.5
+  },
+  "risk_management": {
+    "max_drawdown": 15,
+    "position_timeout": 7200,
+    "max_daily_loss": 500,
+    "stop_all_trading": false
+  },
+  "execution": {
+    "slippage": 0.05,
+    "retry_attempts": 5,
+    "retry_delay": 2,
+    "order_timeout": 60,
+    "use_market_orders": false,
+    "partial_fill_handling": "retry"
+  },
+  "monitoring": {
+    "log_level": "DEBUG",
+    "log_to_file": true,
+    "log_file": "logs/strategy_conservative.log",
+    "log_trades": true,
+    "log_signals": true,
+    "metrics_collection": true,
+    "alert_webhook": "",
+    "alert_email": ""
+  }
+}

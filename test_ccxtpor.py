@@ -12,7 +12,8 @@ async def main():
     while True:
         try:
             orderbook = await exchange.watch_order_book(symbol)
-            print(orderbook['bids'][0], orderbook['asks'][0])
+            print(orderbook)
+            # print(orderbook['bids'][0], orderbook['asks'][0])
         except Exception as e:
             print(type(e).__name__, str(e))
     await exchange.close()

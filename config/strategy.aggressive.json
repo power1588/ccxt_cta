@@ -1,0 +1,51 @@
+{
+  "strategy": {
+    "name": "Aggressive Volume Price Breakout",
+    "description": "Higher risk configuration with more sensitive thresholds",
+    "version": "1.0.0",
+    "mode": "paper"
+  },
+  "trading": {
+    "symbol": "BTC/USDT",
+    "timeframe": "1m",
+    "exchange": "binance",
+    "sandbox": true,
+    "api_key": "",
+    "secret": ""
+  },
+  "parameters": {
+    "volume_period": 15,
+    "volume_multiplier": 1.5,
+    "price_change_threshold": 0.8,
+    "capital_usage_percent": 15,
+    "add_position_threshold": 1.2,
+    "stop_loss_threshold": 4.0,
+    "max_positions": 5,
+    "min_order_size": 0.001,
+    "max_order_size": 2.0
+  },
+  "risk_management": {
+    "max_drawdown": 25,
+    "position_timeout": 1800,
+    "max_daily_loss": 2000,
+    "stop_all_trading": false
+  },
+  "execution": {
+    "slippage": 0.2,
+    "retry_attempts": 2,
+    "retry_delay": 0.5,
+    "order_timeout": 15,
+    "use_market_orders": true,
+    "partial_fill_handling": "accept"
+  },
+  "monitoring": {
+    "log_level": "INFO",
+    "log_to_file": true,
+    "log_file": "logs/strategy_aggressive.log",
+    "log_trades": true,
+    "log_signals": true,
+    "metrics_collection": true,
+    "alert_webhook": "",
+    "alert_email": ""
+  }
+}
