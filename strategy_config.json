@@ -1,0 +1,42 @@
+{
+    "strategy": {
+        "name": "量价突破顺势加仓策略",
+        "description": "基于成交量突破和价格涨幅的顺势交易策略",
+        "version": "1.0"
+    },
+    "trading": {
+        "symbol": "BTC/USDT",
+        "timeframe": "1m",
+        "exchange": "binance",
+        "sandbox": false,
+        "api_key": "",
+        "secret": ""
+    },
+    "parameters": {
+        "R": 30,
+        "N": 2.0,
+        "M": 1.5,
+        "Q": 10,
+        "U": 2.0,
+        "S": 3.0
+    },
+    "risk_management": {
+        "max_positions": 5,
+        "max_drawdown": 20,
+        "min_order_size": 0.001,
+        "max_order_size": 1.0,
+        "position_timeout": 3600
+    },
+    "execution": {
+        "slippage": 0.1,
+        "retry_attempts": 3,
+        "retry_delay": 1,
+        "order_timeout": 30
+    },
+    "logging": {
+        "level": "INFO",
+        "log_to_file": true,
+        "log_file": "strategy.log",
+        "print_trades": true
+    }
+}
