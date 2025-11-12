@@ -120,8 +120,11 @@ class VolumePriceBreakoutStrategy:
                     'secret': self.config["trading"]["secret"],
                     'sandbox': self.config["trading"]["sandbox"],
                     'enableRateLimit': True,
+                    'options': {
+                        'defaultType': 'spot',  # 确保使用现货交易
+                    }
                 })
-                print("使用 ccxt.pro 初始化交易所")
+                print("✅ 使用 ccxt.pro 初始化币安交易所")
                 return exchange
             except ImportError:
                 pass
@@ -132,12 +135,15 @@ class VolumePriceBreakoutStrategy:
                 'secret': self.config["trading"]["secret"],
                 'sandbox': self.config["trading"]["sandbox"],
                 'enableRateLimit': True,
+                'options': {
+                    'defaultType': 'spot',  # 确保使用现货交易
+                }
             })
-            print("使用 ccxt 初始化交易所")
+            print("✅ 使用 ccxt 初始化币安交易所")
             return exchange
 
         except Exception as e:
-            print(f"初始化交易所失败: {e}")
+            print(f"❌ 初始化交易所失败: {e}")
             raise
 
     def _setup_logging(self):

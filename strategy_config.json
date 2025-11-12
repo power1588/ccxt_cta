@@ -8,7 +8,7 @@
         "symbol": "BTC/USDT",
         "timeframe": "1m",
         "exchange": "binance",
-        "sandbox": false,
+        "sandbox": true,
         "api_key": "",
         "secret": ""
     },
